@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811B7B8D1CB374430019BF6A /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B7B8C1CB374430019BF6A /* MarqueeLabel.swift */; };
+		811FDA141CB7E9DA00903ADA /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 811FDA131CB7E9DA00903ADA /* info.png */; };
+		819FFB631CB3EE090081B5E6 /* magnifying_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FFB5E1CB3EE090081B5E6 /* magnifying_glass.png */; };
+		819FFB641CB3EE090081B5E6 /* spotify-logo500.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FFB5F1CB3EE090081B5E6 /* spotify-logo500.png */; };
+		819FFB681CB3F1BC0081B5E6 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FFB651CB3F1BC0081B5E6 /* pause.png */; };
+		819FFB691CB3F1BC0081B5E6 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FFB661CB3F1BC0081B5E6 /* play.png */; };
+		819FFB6A1CB3F1BC0081B5E6 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FFB671CB3F1BC0081B5E6 /* rewind.png */; };
+		81B4EF351CC8548600829C71 /* nilartist.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B4EF341CC8548600829C71 /* nilartist.png */; };
 		81E32E671CB14DF800B6B68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E32E661CB14DF800B6B68D /* AppDelegate.swift */; };
 		81E32E691CB14DF800B6B68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E32E681CB14DF800B6B68D /* ViewController.swift */; };
 		81E32E6C1CB14DF800B6B68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E32E6A1CB14DF800B6B68D /* Main.storyboard */; };
@@ -26,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		811B7B8C1CB374430019BF6A /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		811FDA131CB7E9DA00903ADA /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = SOURCE_ROOT; };
+		819FFB5E1CB3EE090081B5E6 /* magnifying_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifying_glass.png; sourceTree = "<group>"; };
+		819FFB5F1CB3EE090081B5E6 /* spotify-logo500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify-logo500.png"; sourceTree = "<group>"; };
+		819FFB651CB3F1BC0081B5E6 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		819FFB661CB3F1BC0081B5E6 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		819FFB671CB3F1BC0081B5E6 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
+		81B4EF341CC8548600829C71 /* nilartist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nilartist.png; sourceTree = "<group>"; };
 		81E32E631CB14DF800B6B68D /* Musiquest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musiquest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E32E661CB14DF800B6B68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E32E681CB14DF800B6B68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +75,13 @@
 		81E32E5A1CB14DF700B6B68D = {
 			isa = PBXGroup;
 			children = (
+				81B4EF341CC8548600829C71 /* nilartist.png */,
+				819FFB651CB3F1BC0081B5E6 /* pause.png */,
+				819FFB661CB3F1BC0081B5E6 /* play.png */,
+				819FFB671CB3F1BC0081B5E6 /* rewind.png */,
+				819FFB5E1CB3EE090081B5E6 /* magnifying_glass.png */,
+				819FFB5F1CB3EE090081B5E6 /* spotify-logo500.png */,
+				811FDA131CB7E9DA00903ADA /* info.png */,
 				81E32E651CB14DF800B6B68D /* Musiquest */,
 				81E32E7A1CB14DF800B6B68D /* MusiquestTests */,
 				81E32E641CB14DF800B6B68D /* Products */,
@@ -77,9 +100,10 @@
 		81E32E651CB14DF800B6B68D /* Musiquest */ = {
 			isa = PBXGroup;
 			children = (
+				811B7B8C1CB374430019BF6A /* MarqueeLabel.swift */,
+				81E32E6A1CB14DF800B6B68D /* Main.storyboard */,
 				81E32E661CB14DF800B6B68D /* AppDelegate.swift */,
 				81E32E681CB14DF800B6B68D /* ViewController.swift */,
-				81E32E6A1CB14DF800B6B68D /* Main.storyboard */,
 				81E32E6D1CB14DF800B6B68D /* Assets.xcassets */,
 				81E32E6F1CB14DF800B6B68D /* LaunchScreen.storyboard */,
 				81E32E721CB14DF800B6B68D /* Info.plist */,
@@ -179,9 +203,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819FFB691CB3F1BC0081B5E6 /* play.png in Resources */,
 				81E32E711CB14DF800B6B68D /* LaunchScreen.storyboard in Resources */,
+				811FDA141CB7E9DA00903ADA /* info.png in Resources */,
 				81E32E6E1CB14DF800B6B68D /* Assets.xcassets in Resources */,
+				81B4EF351CC8548600829C71 /* nilartist.png in Resources */,
+				819FFB681CB3F1BC0081B5E6 /* pause.png in Resources */,
 				81E32E6C1CB14DF800B6B68D /* Main.storyboard in Resources */,
+				819FFB631CB3EE090081B5E6 /* magnifying_glass.png in Resources */,
+				819FFB6A1CB3F1BC0081B5E6 /* rewind.png in Resources */,
+				819FFB641CB3EE090081B5E6 /* spotify-logo500.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811B7B8D1CB374430019BF6A /* MarqueeLabel.swift in Sources */,
 				81E32E691CB14DF800B6B68D /* ViewController.swift in Sources */,
 				81E32E671CB14DF800B6B68D /* AppDelegate.swift in Sources */,
 			);
@@ -392,6 +424,7 @@
 				81E32E821CB14DF800B6B68D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81E32E831CB14DF800B6B68D /* Build configuration list for PBXNativeTarget "MusiquestTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +433,7 @@
 				81E32E851CB14DF800B6B68D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

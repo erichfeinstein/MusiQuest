@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Musiquest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,275 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQY-dL-1pX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-P1-5Uh">
+                                <rect key="frame" x="230" y="393" width="140" height="42"/>
+                                <color key="backgroundColor" red="0.21729049978134987" green="0.89229166666666671" blue="0.00046001282864773939" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="BJg-0L-CKL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <color key="tintColor" red="0.31682130009999998" green="0.72126197810000003" blue="0.26329383369999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="0.95189513845027329" green="1" blue="0.94298193255094109" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchArtist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5eo-V9-WzO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ex: The Beatles" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="uIL-Bs-KLw">
+                                <rect key="frame" x="20" y="325" width="560" height="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="light" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQE-7u-0L1" customClass="MarqueeLabel" customModule="Musiquest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="345" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-LR-38n">
+                                <rect key="frame" x="254" y="505" width="92" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cl-rm-SXD" customClass="MarqueeLabel" customModule="Musiquest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="526" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify-logo500.png" translatesAutoresizingMaskIntoConstraints="NO" id="rTI-cV-tau">
+                                <rect key="frame" x="175" y="50" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6Q6-nz-xLn"/>
+                                    <constraint firstAttribute="width" constant="250" id="TBg-1v-qyh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amY-JW-SOd">
+                                <rect key="frame" x="543" y="37" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="czz-9r-2tR"/>
+                                    <constraint firstAttribute="width" constant="29" id="lKG-JH-I5p"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="magnifying_glass.png"/>
+                                <connections>
+                                    <action selector="newSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BW8-zQ-j2h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ii-YD-2qZ">
+                                <rect key="frame" x="320" y="360" width="120" height="42"/>
+                                <color key="backgroundColor" red="0.89229166670000004" green="0.26594031099999998" blue="0.080809023460000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Jhi-BX-j5C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Dislike">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findDifferentArtist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wil-tM-6a2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an artist to begin your Musiquest!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgA-xR-807">
+                                <rect key="frame" x="40" y="288" width="520" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgP-xH-80Y">
+                                <rect key="frame" x="175" y="534" width="250" height="42"/>
+                                <color key="backgroundColor" red="0.21729049980000001" green="0.89229166670000004" blue="0.00046001282860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="F15-1f-gCg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Open in Spotify">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openInSpotify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EhM-E9-3yF"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-h5-7ky">
+                                <rect key="frame" x="250" y="308" width="100" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-s6-aTN">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <state key="normal" image="rewind.png"/>
+                                        <connections>
+                                            <action selector="rewind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpJ-4n-hKN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U1-gi-3qS">
+                                        <rect key="frame" x="65" y="0.0" width="35" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" image="pause.png"/>
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VV8-gi-3iF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvH-hL-btl">
+                                <rect key="frame" x="160" y="360" width="120" height="42"/>
+                                <color key="backgroundColor" red="0.21729049980000001" green="0.89229166670000004" blue="0.00046001282860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7xm-H6-aBk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findRelatedArtist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpG-xt-NSv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoz-n7-aXG">
+                                <rect key="frame" x="240" y="360" width="120" height="42"/>
+                                <color key="backgroundColor" red="0.21729049980000001" green="0.89229166670000004" blue="0.00046001282860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="JE4-d9-piz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Ok!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findRelatedArtist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7UO-G0-u8K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cl0-4Q-nTC">
+                                <rect key="frame" x="20" y="33.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HTY-Rd-uei"/>
+                                    <constraint firstAttribute="height" constant="20" id="rF0-xR-Q9D"/>
+                                </constraints>
+                                <state key="normal" image="info.png"/>
+                                <connections>
+                                    <action selector="info:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A1b-7g-qpu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.24099039832147059" alpha="1" colorSpace="deviceWhite"/>
+                        <constraints>
+                            <constraint firstItem="CWb-h5-7ky" firstAttribute="top" secondItem="rTI-cV-tau" secondAttribute="bottom" constant="8" id="13H-RQ-cui"/>
+                            <constraint firstItem="uIL-Bs-KLw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Fo-Md-t7Z"/>
+                            <constraint firstItem="rTI-cV-tau" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6It-pz-GAT"/>
+                            <constraint firstItem="WNQ-P1-5Uh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6h4-BT-oOb"/>
+                            <constraint firstItem="CWb-h5-7ky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xp-Yc-HEk"/>
+                            <constraint firstItem="7Ii-YD-2qZ" firstAttribute="top" secondItem="WNQ-P1-5Uh" secondAttribute="bottom" constant="8" id="8sh-aV-ToH"/>
+                            <constraint firstItem="uIL-Bs-KLw" firstAttribute="top" secondItem="sgA-xR-807" secondAttribute="bottom" constant="15" id="9kZ-SS-fJq"/>
+                            <constraint firstItem="7Ii-YD-2qZ" firstAttribute="top" secondItem="wQE-7u-0L1" secondAttribute="bottom" constant="15" id="AGN-aH-Vva"/>
+                            <constraint firstItem="rTI-cV-tau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FjO-zN-5iX"/>
+                            <constraint firstItem="NvH-hL-btl" firstAttribute="top" secondItem="wQE-7u-0L1" secondAttribute="bottom" constant="15" id="GI2-1w-kDM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uIL-Bs-KLw" secondAttribute="trailing" id="LPV-89-tvo"/>
+                            <constraint firstItem="sgA-xR-807" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lbk-U1-HZn"/>
+                            <constraint firstItem="sgA-xR-807" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="P3B-79-soE"/>
+                            <constraint firstItem="CQY-dL-1pX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Qgl-ys-u1M"/>
+                            <constraint firstItem="uoz-n7-aXG" firstAttribute="top" secondItem="wQE-7u-0L1" secondAttribute="bottom" constant="15" id="R9c-EH-cB8"/>
+                            <constraint firstItem="WNQ-P1-5Uh" firstAttribute="top" secondItem="uIL-Bs-KLw" secondAttribute="bottom" constant="60" id="RIm-u5-iNK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Cl-rm-SXD" secondAttribute="trailing" id="VJV-pH-Gv8"/>
+                            <constraint firstItem="wQE-7u-0L1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WfL-qT-n5w"/>
+                            <constraint firstItem="wQE-7u-0L1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XAQ-Ui-s4Z"/>
+                            <constraint firstItem="HgP-xH-80Y" firstAttribute="top" secondItem="2Cl-rm-SXD" secondAttribute="bottom" constant="8" id="XbV-Wa-cxW"/>
+                            <constraint firstItem="2Cl-rm-SXD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Z6P-3G-Od7"/>
+                            <constraint firstItem="WNQ-P1-5Uh" firstAttribute="top" secondItem="wQE-7u-0L1" secondAttribute="bottom" constant="48" id="a2J-l6-03h"/>
+                            <constraint firstItem="Cl0-4Q-nTC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aOV-8T-6U0"/>
+                            <constraint firstItem="amY-JW-SOd" firstAttribute="centerY" secondItem="Cl0-4Q-nTC" secondAttribute="centerY" constant="8" id="adk-c2-uY6"/>
+                            <constraint firstItem="uoz-n7-aXG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bnh-TF-kf9"/>
+                            <constraint firstItem="amY-JW-SOd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="bnt-g5-LoS"/>
+                            <constraint firstItem="HgP-xH-80Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxY-kF-Qga"/>
+                            <constraint firstItem="rTI-cV-tau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dOy-3e-ENJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CQY-dL-1pX" secondAttribute="bottom" id="dvt-N7-Dxu"/>
+                            <constraint firstItem="rdl-LR-38n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPT-CC-yrr"/>
+                            <constraint firstItem="wQE-7u-0L1" firstAttribute="top" secondItem="uIL-Bs-KLw" secondAttribute="bottom" constant="-16" id="gm4-k6-XaY"/>
+                            <constraint firstItem="CQY-dL-1pX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="j8B-ci-9bY"/>
+                            <constraint firstItem="rdl-LR-38n" firstAttribute="top" secondItem="NvH-hL-btl" secondAttribute="bottom" constant="8" id="jvG-IO-BT9"/>
+                            <constraint firstItem="uIL-Bs-KLw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWG-en-mEi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CQY-dL-1pX" secondAttribute="trailing" constant="-20" id="p6i-VU-GrT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="amY-JW-SOd" secondAttribute="trailing" constant="8" id="qIm-Ar-ODr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sgA-xR-807" secondAttribute="trailing" constant="20" id="sMM-Bi-05B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HgP-xH-80Y" secondAttribute="bottom" constant="24" id="sXK-fV-GNN"/>
+                            <constraint firstItem="2Cl-rm-SXD" firstAttribute="top" secondItem="rdl-LR-38n" secondAttribute="bottom" id="trM-dF-eY5"/>
+                            <constraint firstItem="uIL-Bs-KLw" firstAttribute="top" secondItem="rTI-cV-tau" secondAttribute="bottom" constant="25" id="ucO-Fj-p7J"/>
+                            <constraint firstItem="NvH-hL-btl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="vK9-w3-8lR"/>
+                            <constraint firstItem="rTI-cV-tau" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="xNY-sq-CVg"/>
+                            <constraint firstItem="7Ii-YD-2qZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="z3n-ti-I1j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6It-pz-GAT"/>
+                                <exclude reference="dOy-3e-ENJ"/>
+                                <exclude reference="RIm-u5-iNK"/>
+                                <exclude reference="8sh-aV-ToH"/>
+                                <exclude reference="jvG-IO-BT9"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="wQE-7u-0L1" id="UiZ-zu-DCv"/>
+                        <outlet property="artistPicture" destination="rTI-cV-tau" id="bC2-6u-2Td"/>
+                        <outlet property="backgroundPicture" destination="CQY-dL-1pX" id="qK8-ru-eq7"/>
+                        <outlet property="dislikeButton" destination="7Ii-YD-2qZ" id="EqA-j7-F9j"/>
+                        <outlet property="likeButton" destination="NvH-hL-btl" id="7h2-kJ-TsF"/>
+                        <outlet property="musiquestLabel" destination="sgA-xR-807" id="ACK-eg-FWX"/>
+                        <outlet property="nowPlaying" destination="rdl-LR-38n" id="Ozj-Wb-sDU"/>
+                        <outlet property="okButton" destination="uoz-n7-aXG" id="qPI-Ib-oPM"/>
+                        <outlet property="pauseButton" destination="1U1-gi-3qS" id="fNQ-Oz-mrM"/>
+                        <outlet property="restartSearchButton" destination="amY-JW-SOd" id="0Zo-AH-3hB"/>
+                        <outlet property="rewindButton" destination="fxq-s6-aTN" id="68m-iq-ri0"/>
+                        <outlet property="searchBox" destination="uIL-Bs-KLw" id="7zS-9d-gaF"/>
+                        <outlet property="searchButton" destination="WNQ-P1-5Uh" id="UpF-RY-OaP"/>
+                        <outlet property="songLabel" destination="2Cl-rm-SXD" id="JAs-YU-mWt"/>
+                        <outlet property="spotifyButton" destination="HgP-xH-80Y" id="WlL-rg-tt3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="417" y="353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.png" width="100" height="100"/>
+        <image name="magnifying_glass.png" width="100" height="101"/>
+        <image name="pause.png" width="35" height="35"/>
+        <image name="rewind.png" width="35" height="35"/>
+        <image name="spotify-logo500.png" width="1000" height="1000"/>
+    </resources>
 </document>
